@@ -40,7 +40,7 @@ Flash 报告快速回答：
 4. 核心概念是否真正量化；
 5. 下一步是否值得 Deep 精读。
 
-![虚构阀开度比较](images/opening_comparison.png)
+![虚构阀开度比较](assets/opening_comparison.png)
 
 虚构结果设定为 70% 开度的峰值汽相代理指标最高，但报告同时指出：没有材料侵蚀试验时，不能把代理指标下降直接解释为“侵蚀风险下降”。
 
@@ -52,11 +52,11 @@ Deep 报告按三层组织：
 - Layer 2：分区指标、图表、实验控制、模型和验证层级；
 - Layer 3：漏洞、场景边界、量化成熟度和 P0/P1/P2 迁移计划。
 
-![虚构研究框架](images/framework.png)
+![虚构研究框架](assets/framework.png)
 
-![虚构惯性热力学分区](images/regime_map.png)
+![虚构惯性热力学分区](assets/regime_map.png)
 
-![虚构分级压降控制](images/staged_drop.png)
+![虚构分级压降控制](assets/staged_drop.png)
 
 ## 这个示例体现的表格规则
 
@@ -70,3 +70,4 @@ Deep 报告按三层组织：
 ## 适用提醒
 
 虚构数据只能用于演示阅读流程、批判框架和排版，不能替代真实论文阅读。实际使用时，Paperzh Reading Skill 会优先依据用户提供的 PDF，并区分“论文明确”“直接观察”“合理推断”和“无法确定”。
+
