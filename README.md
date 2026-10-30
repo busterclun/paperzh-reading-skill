@@ -18,3 +18,6 @@ The skill folder name and YAML `name` are `paperzh-reading`; the user-facing dis
 
 See [SKILL.md](SKILL.md) for the complete workflow and [references](references/) for mode-specific schemas and DOCX checks.
 
+## Analysis demonstration
+
+A complete illustrated analysis of a cryogenic-cavitation review is available in [analysis/README.md](analysis/README.md), with both Flash and Deep DOCX reports plus representative figure screenshots.
