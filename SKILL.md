@@ -206,6 +206,19 @@ Create the report as a real editable `.docx`. Use the document-generation capabi
 - Keep tables within page width; repeat header rows and allow row breaks only when readable.
 - Put source locations in notes or evidence columns. Preserve units and significant figures.
 
+### Table alignment and visual hierarchy
+
+Treat table alignment as part of the information design, not as a global left-align default.
+
+- Center header cells horizontally and vertically.
+- Center the first column when it contains categories, priorities, statuses, labels, short item names, or other classification values; keep long explanatory first-column text left-aligned.
+- Center short body values when the cell is a compact label, number, unit, date, status, score, or one short phrase. “Short” is a judgment based on fit and readability; a practical default is roughly one line or at most 12 Chinese characters/words.
+- Keep narrative, evidence, caveat, method, and recommendation cells left-aligned and vertically centered unless top alignment is clearly better for a very long multi-line cell.
+- Vertical centering is the default for all cells. Do not leave short labels pinned to the upper-left corner.
+- Use deliberate column widths: compact columns for item number, type, status, priority, and result; wider columns for evidence and interpretation. Do not use equal-width columns when the content roles differ.
+- Add cell padding and light gray borders. Use a consistent header fill and restrained alternating row shading. Do not merge cells merely to force a visual center; merge only when a grouped header has a clear semantic meaning.
+- When a table mixes short labels and long explanations, align each cell by role rather than aligning the entire row uniformly. The goal is that short labels occupy the visual center of their cells while evidence remains easy to scan.
+
 ### Required report packaging
 
 For one paper, create one report named `Paperzh_<short-title>_<mode>.docx`.
@@ -249,4 +262,5 @@ Read only the references relevant to the current task:
 - [references/flash-mode.md](references/flash-mode.md) — Flash card, comparison matrix, and fast triage procedure.
 - [references/deep-mode.md](references/deep-mode.md) — Deep evidence chain, figure/table/formula reading, and research-transfer schema.
 - [references/docx-spec.md](references/docx-spec.md) — DOCX structure, typography, naming, and verification requirements.
+
 
