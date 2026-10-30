@@ -1,0 +1,8 @@
+interface:
+  display_name: "Paperzh Reading Skill"
+  short_description: "Read, critique, compare papers, and deliver DOCX reports"
+  default_prompt: "Use $paperzh-reading to review these papers in Flash or Deep mode and deliver a Chinese DOCX report."
+
+policy:
+  allow_implicit_invocation: true
+
