@@ -14,6 +14,18 @@ Create or reuse named styles so the document remains editable:
 
 When a run contains mixed scripts, set East Asia and ASCII font properties explicitly if the document library supports them. Check the rendered result rather than trusting the style name.
 
+## Table alignment rules
+
+Tables should be visually hierarchical and role-aware:
+
+- Header cells: horizontal center and vertical center.
+- First-column category cells: horizontal center and vertical center when they are short labels, priorities, statuses, or item names.
+- Short values: center them in both directions when they fit on one line or are otherwise compact.
+- Long narrative cells: left-align horizontally and center vertically; use top alignment only when a long multi-line cell is easier to compare that way.
+- Use compact widths for type, status, priority, year, number, and result columns; reserve wider columns for evidence and interpretation.
+- Add readable cell padding, light gray borders, a consistent header fill, and restrained alternating row shading.
+- Never force a centered appearance by merging unrelated cells. Merge only semantically grouped headers.
+
 ## Minimal document structure
 
 1. Title and review mode.
@@ -47,4 +59,5 @@ Before handoff:
 审阅日期：YYYY-MM-DD
 证据限制：
 ```
+
 
