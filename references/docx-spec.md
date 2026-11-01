@@ -14,19 +14,21 @@ Create or reuse named styles so the document remains editable:
 
 When a run contains mixed scripts, set East Asia and ASCII font properties explicitly if the document library supports them. Check the rendered result rather than trusting the style name.
 
-## School-format overlay
+## Default report profile
 
-For the user's graduation-design/thesis-formatted Word deliverables, apply [thesis-format-bit-mechanical-2022.md](thesis-format-bit-mechanical-2022.md). The key non-negotiable values are:
+Use the original Paperzh research-report layout by default. It is a clean blue-gray analytical report, not a graduation thesis, school template, journal template, or institutional archive package.
 
-- A4 portrait; margins top 3.5 cm, bottom 2.6 cm, left 3.0 cm, right 2.6 cm.
-- Header 2.4 cm, footer 2.0 cm, gutter 0.
-- Header text `北京理工大学本科生毕业设计（论文）`, SimSun 14 pt, centered, character spacing +0.5 pt.
-- Footer page number, SimSun 10.5 pt, centered.
-- Chapter heading SimHei 16 pt bold centered; level 2 SimHei 14 pt bold left; level 3 SimHei 12 pt bold left.
-- Body SimSun 12 pt with fixed 22 pt line spacing and no paragraph spacing before/after.
-- Chapter-based numbering for figures, tables, and equations; captions/titles SimSun 10.5 pt centered; GB/T 7714—2015 references.
+- Use A4 portrait unless wide comparison tables clearly require a different page orientation for selected sections.
+- Choose readable, balanced margins rather than fixed school-specific values.
+- Use a white page, dark blue-gray title/heading hierarchy, light blue-gray table headers and callout boxes, restrained borders, and ample whitespace.
+- Start the cover directly with the report identity, title, mode, source metadata, and evidence scope. The cover must not contain a running header or any school/institution/thesis header above the title.
+- On content pages only, a small right-aligned running header such as `PAPERZH READING | DEEP MODE` or `PAPERZH READING | FLASH MODE` may be used when it matches the layout; omit it if it makes the page busier.
+- Use a simple centered page number and compact section transitions. Do not create thesis-style chapter-opening blank space.
+- Use page numbers and stable section breaks when the report length benefits from them.
+- Number figures, tables, and equations consistently within the report; use chapter-based numbering only when the requested document structure actually has chapters.
+- Preserve the requested Chinese and Latin fonts while allowing Word's mathematics font for native equation structures.
 
-Do not invent a cover, task book, evaluation form, declaration, or other administrative page when producing a paper-reading report. Add those pages only when the user provides or explicitly requests the thesis package template.
+Never add school names, institutional thesis headers, thesis margins, administrative pages, or archive structure unless the user explicitly requests that exact template for the current deliverable. If the user supplies a template, apply it as a task-specific override; do not turn that one-off template into the skill's permanent default.
 
 ## Table alignment rules
 
@@ -39,6 +41,17 @@ Tables should be visually hierarchical and role-aware:
 - Use compact widths for type, status, priority, year, number, and result columns; reserve wider columns for evidence and interpretation.
 - Add readable cell padding, light gray borders, a consistent header fill, and restrained alternating row shading.
 - Never force a centered appearance by merging unrelated cells. Merge only semantically grouped headers.
+
+## Equation formatting rules
+
+Read [equation-format.md](equation-format.md) before authoring or revising any report that contains equations or formula-definition tables.
+
+- Display equations, formula-only cells, and mathematical relationships embedded in prose, bullets, captions, or mixed-content cells must use native editable Word math (OMML) in Professional layout when they contain fractions, roots, scripts, vectors, absolute values, or chained relations.
+- Use stacked fractions for true mathematical division, including inline formulas. Plain slash notation is reserved for units, URLs/DOIs, ordinary prose separators, and explicit lists; rewrite ambiguous list shorthand rather than formatting it as a fraction.
+- Use structured radicals, superscripts, subscripts, delimiters, Greek symbols, vectors, and matrices rather than linear-text approximations.
+- Center formula-only cells horizontally and vertically, preserve comfortable padding, and allow rows to grow.
+- Keep equation numbers at the right margin under the active numbering profile. For wrapped equations, put the number on the final line.
+- Run a residual linear-math audit over paragraphs and all table cells, then verify both structure and rendering: confirm native math objects remain in the DOCX and inspect every equation-bearing page for clipping, flattening, missing glyphs, incorrect scripts, and insufficient inline line height.
 
 ## Minimal document structure
 
@@ -58,8 +71,8 @@ Before handoff:
 
 - confirm the file is a valid `.docx` package and opens;
 - confirm no `[TODO]`, placeholder, or empty required section remains;
-- inspect at least the first page, a dense table page, and the final page;
-- check heading hierarchy, page numbers, table width, row splitting, figure captions, units, and equation readability;
+- inspect every page for final delivery, with particular attention to the first page, dense tables, every equation-bearing page, and the final page;
+- check heading hierarchy, page numbers, table width, row splitting, figure captions, units, equation readability, native editability, and Professional fraction/root/script layout;
 - verify Chinese headings/body and English/numbers use the requested fonts;
 - ensure the filename identifies paper/topic and mode;
 - keep the source PDF/HTML separate from the final DOCX unless the user requested an appendix.
