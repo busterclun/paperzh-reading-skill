@@ -206,6 +206,26 @@ Create the report as a real editable `.docx`. Use the document-generation capabi
 - Keep tables within page width; repeat header rows and allow row breaks only when readable.
 - Put source locations in notes or evidence columns. Preserve units and significant figures.
 
+### Thesis-format delivery profile (BIT Mechanical and Vehicle Engineering, 2022)
+
+When the user asks for a graduation-design/thesis-formatted DOCX, or asks to apply the supplied Beijing Institute of Technology Mechanical and Vehicle Engineering 2022 writing standard, use the profile in [references/thesis-format-bit-mechanical-2022.md](references/thesis-format-bit-mechanical-2022.md). This profile is the default school-format overlay for the user's Word deliverables unless the user supplies a newer or different school template.
+
+- Page: A4 portrait; top 3.5 cm, bottom 2.6 cm, left 3.0 cm, right 2.6 cm; header distance 2.4 cm; footer distance 2.0 cm; binding gutter 0.
+- Header: `北京理工大学本科生毕业设计（论文）`, SimSun, 四号 (14 pt), centered, with character spacing widened by 0.5 pt.
+- Footer: centered page number, SimSun, 五号 (10.5 pt).
+- Chapter heading: `第1章` style, SimHei, 三号 (16 pt), bold, centered in the body, 0.5 line before and 1 line after.
+- Level-2 heading: `1.1` style, SimHei, 四号 (14 pt), bold, left aligned, 0.5 line before and 0 after.
+- Level-3 heading: `1.1.1` style, SimHei, 小四 (12 pt), bold, left aligned, 0.5 line before and 0 after.
+- Heading line spacing: 1.5 lines. Body: SimSun, 小四 (12 pt), fixed 22 pt line spacing, 0 pt before and after.
+- Numbering: chapters `第1章、第2章…`; second level `1.1、1.2…`; third level `1.1.1、1.1.2…`. In the body, only the chapter heading is centered; lower levels are left aligned. In the table of contents, chapter entries are left aligned and each lower level is indented one level farther.
+- Figures and tables: chapter-based Arabic numbering (`图1-1`, `表1-1`); center the object; put a figure caption below a figure and a table title above a table; use SimSun, 五号, centered captions/titles; leave one blank line between the object and surrounding text.
+- Equations: chapter-based numbering such as `(1-1)`; place the number at the right side of the equation line, place a wrapped equation number on the final line, and cite it as `公式(1-1)`.
+- References: follow **GB/T 7714—2015** and use the standard type identifiers (for example, M, C, J, D, R, S, P, DB, CP, EB, A, CM, DS, Z).
+- Appendices: label with uppercase letters (`附录A`, `附录B`); number appendix figures, tables, equations, and references with the appendix prefix (`图A-1`, `表B-2`, `式(B-3)`, `[A-4]`).
+- Archive order when a thesis package is requested: cover → task book → evaluation form → originality/use-authorization declarations → Chinese and English abstracts → contents → main text → conclusion → references → appendices → acknowledgements. Foreign-language translation package order: translation cover → original text → Chinese translation. Do not fabricate administrative pages for a paper-reading report; include them only when the user provides or requests the corresponding thesis template pages.
+
+The full rule table, archive notes, and implementation checklist are in the linked reference. If the user supplies a different institution's template, treat that template as higher priority and create or update a separate school-format reference rather than silently mixing rules.
+
 ### Table alignment and visual hierarchy
 
 Treat table alignment as part of the information design, not as a global left-align default.
