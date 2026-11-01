@@ -12,12 +12,12 @@ Both modes deliver editable Chinese `.docx` reports with:
 - Chinese headings in SimHei;
 - Chinese body text in SimSun;
 - English text and numbers in Times New Roman;
-- simple, readable styles and evidence locations.
+- the original clean blue-gray Paperzh report layout, without school/thesis headers by default;
+- centered, role-aware tables and clear evidence locations;
+- native editable Word equations with professional stacked fractions, radicals, and scripts.
 
 The skill folder name and YAML `name` are `paperzh-reading`; the user-facing display name is `Paperzh Reading Skill`.
 
 See [SKILL.md](SKILL.md) for the complete workflow and [references](references/) for mode-specific schemas and DOCX checks.
 
-## Analysis demonstration
 
-A complete illustrated analysis of a cryogenic-cavitation review is available in [analysis/README.md](analysis/README.md), with both Flash and Deep DOCX reports plus representative figure screenshots.
