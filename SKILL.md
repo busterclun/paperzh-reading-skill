@@ -206,25 +206,17 @@ Create the report as a real editable `.docx`. Use the document-generation capabi
 - Keep tables within page width; repeat header rows and allow row breaks only when readable.
 - Put source locations in notes or evidence columns. Preserve units and significant figures.
 
-### Thesis-format delivery profile (BIT Mechanical and Vehicle Engineering, 2022)
+### Default Paperzh visual profile
 
-When the user asks for a graduation-design/thesis-formatted DOCX, or asks to apply the supplied Beijing Institute of Technology Mechanical and Vehicle Engineering 2022 writing standard, use the profile in [references/thesis-format-bit-mechanical-2022.md](references/thesis-format-bit-mechanical-2022.md). This profile is the default school-format overlay for the user's Word deliverables unless the user supplies a newer or different school template.
+Unless the user supplies another template for the current task, use the original Paperzh research-report appearance:
 
-- Page: A4 portrait; top 3.5 cm, bottom 2.6 cm, left 3.0 cm, right 2.6 cm; header distance 2.4 cm; footer distance 2.0 cm; binding gutter 0.
-- Header: `北京理工大学本科生毕业设计（论文）`, SimSun, 四号 (14 pt), centered, with character spacing widened by 0.5 pt.
-- Footer: centered page number, SimSun, 五号 (10.5 pt).
-- Chapter heading: `第1章` style, SimHei, 三号 (16 pt), bold, centered in the body, 0.5 line before and 1 line after.
-- Level-2 heading: `1.1` style, SimHei, 四号 (14 pt), bold, left aligned, 0.5 line before and 0 after.
-- Level-3 heading: `1.1.1` style, SimHei, 小四 (12 pt), bold, left aligned, 0.5 line before and 0 after.
-- Heading line spacing: 1.5 lines. Body: SimSun, 小四 (12 pt), fixed 22 pt line spacing, 0 pt before and after.
-- Numbering: chapters `第1章、第2章…`; second level `1.1、1.2…`; third level `1.1.1、1.1.2…`. In the body, only the chapter heading is centered; lower levels are left aligned. In the table of contents, chapter entries are left aligned and each lower level is indented one level farther.
-- Figures and tables: chapter-based Arabic numbering (`图1-1`, `表1-1`); center the object; put a figure caption below a figure and a table title above a table; use SimSun, 五号, centered captions/titles; leave one blank line between the object and surrounding text.
-- Equations: chapter-based numbering such as `(1-1)`; place the number at the right side of the equation line, place a wrapped equation number on the final line, and cite it as `公式(1-1)`.
-- References: follow **GB/T 7714—2015** and use the standard type identifiers (for example, M, C, J, D, R, S, P, DB, CP, EB, A, CM, DS, Z).
-- Appendices: label with uppercase letters (`附录A`, `附录B`); number appendix figures, tables, equations, and references with the appendix prefix (`图A-1`, `表B-2`, `式(B-3)`, `[A-4]`).
-- Archive order when a thesis package is requested: cover → task book → evaluation form → originality/use-authorization declarations → Chinese and English abstracts → contents → main text → conclusion → references → appendices → acknowledgements. Foreign-language translation package order: translation cover → original text → Chinese translation. Do not fabricate administrative pages for a paper-reading report; include them only when the user provides or requests the corresponding thesis template pages.
+- A4 portrait with balanced margins, a white page, dark blue-gray headings, light blue-gray table headers/callout boxes, restrained borders, and generous whitespace.
+- The cover starts directly with the report identity, title, mode, source metadata, and evidence scope. Do not place a school, institution, thesis, or administrative header above the cover title.
+- Do not display a running header on the cover. On subsequent content pages, a small, unobtrusive right-aligned header such as `PAPERZH READING | DEEP MODE` or `PAPERZH READING | FLASH MODE` is permitted when it matches the document design; omit it when it would add clutter.
+- Use concise numbered sections, compact evidence tables, pale callouts for key judgments, and a simple centered page number. Preserve visual continuity instead of forcing thesis-style chapter openings or large blank areas.
+- Keep the document printable and editable. Decorative branding must never compete with the analysis.
 
-The full rule table, archive notes, and implementation checklist are in the linked reference. If the user supplies a different institution's template, treat that template as higher priority and create or update a separate school-format reference rather than silently mixing rules.
+This default is a general-purpose Paperzh research-report layout, not a graduation-thesis, school, journal, or institutional template. Never add school names, institutional thesis headers, fixed thesis margins, administrative pages, thesis chapter-number conventions, or archive structure unless the user explicitly requests that exact template for the current deliverable. A supplied template is a task-specific override and must not alter this skill's permanent default.
 
 ### Table alignment and visual hierarchy
 
@@ -238,6 +230,19 @@ Treat table alignment as part of the information design, not as a global left-al
 - Use deliberate column widths: compact columns for item number, type, status, priority, and result; wider columns for evidence and interpretation. Do not use equal-width columns when the content roles differ.
 - Add cell padding and light gray borders. Use a consistent header fill and restrained alternating row shading. Do not merge cells merely to force a visual center; merge only when a grouped header has a clear semantic meaning.
 - When a table mixes short labels and long explanations, align each cell by role rather than aligning the entire row uniformly. The goal is that short labels occupy the visual center of their cells while evidence remains easy to scan.
+
+### Equation layout and editability
+
+Mathematical notation is part of the DOCX deliverable, not plain text decoration. Follow [references/equation-format.md](references/equation-format.md) whenever a report contains equations, symbol definitions, dimensionless groups, or mathematical relationships embedded in prose, bullets, captions, or tables.
+
+- Use native editable Word equations (OMML) in Professional layout for displayed equations, formula-only cells, and inline mathematical relationships that contain division, roots, scripts, absolute values, vectors, or chained equality/inequality.
+- Typeset mathematical division as a stacked numerator and denominator. Do not leave a plain slash merely because the formula appears inside a sentence, bullet, caption, or mixed-content table cell.
+- Use real radical, superscript, subscript, delimiter, Greek-symbol, vector, and matrix structures rather than Unicode approximations or linear text when a structured Word equation is available.
+- A slash remains acceptable in units such as `m/s`, URLs/DOIs, ordinary prose separators, and explicit lists. Replace ambiguous list shorthand such as `Ja/Pe` with `Ja、Pe`; do not misinterpret it as division. A true ratio must use a structured fraction even when inline.
+- Center formula-only table cells horizontally and vertically. Let the row expand naturally; adjust padding, width, or wrapping before flattening the equation or shrinking it to an unreadable size.
+- Keep equations editable. Do not rasterize them unless the user explicitly permits a visual fallback or a tested native path cannot represent the notation; disclose any fallback.
+- Before handoff, audit the entire document body and every table for residual linear-math patterns such as `a/b`, `√(...)`, `^(...)`, `_sub`, Unicode superscript chains, and operator-bearing parameter strings. Classify legitimate units/URLs/separators instead of blindly converting them.
+- Render and inspect every equation-bearing page. Verify stacked fractions, radicals, scripts, equation numbers, inline line height, line breaks, and table-cell clearance, and confirm the final DOCX still contains native math objects.
 
 ### Required report packaging
 
@@ -282,5 +287,6 @@ Read only the references relevant to the current task:
 - [references/flash-mode.md](references/flash-mode.md) — Flash card, comparison matrix, and fast triage procedure.
 - [references/deep-mode.md](references/deep-mode.md) — Deep evidence chain, figure/table/formula reading, and research-transfer schema.
 - [references/docx-spec.md](references/docx-spec.md) — DOCX structure, typography, naming, and verification requirements.
+- [references/equation-format.md](references/equation-format.md) — native Word equation, Professional layout, fraction, table-cell, numbering, and QA rules.
 
 
