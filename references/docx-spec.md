@@ -14,6 +14,20 @@ Create or reuse named styles so the document remains editable:
 
 When a run contains mixed scripts, set East Asia and ASCII font properties explicitly if the document library supports them. Check the rendered result rather than trusting the style name.
 
+## School-format overlay
+
+For the user's graduation-design/thesis-formatted Word deliverables, apply [thesis-format-bit-mechanical-2022.md](thesis-format-bit-mechanical-2022.md). The key non-negotiable values are:
+
+- A4 portrait; margins top 3.5 cm, bottom 2.6 cm, left 3.0 cm, right 2.6 cm.
+- Header 2.4 cm, footer 2.0 cm, gutter 0.
+- Header text `北京理工大学本科生毕业设计（论文）`, SimSun 14 pt, centered, character spacing +0.5 pt.
+- Footer page number, SimSun 10.5 pt, centered.
+- Chapter heading SimHei 16 pt bold centered; level 2 SimHei 14 pt bold left; level 3 SimHei 12 pt bold left.
+- Body SimSun 12 pt with fixed 22 pt line spacing and no paragraph spacing before/after.
+- Chapter-based numbering for figures, tables, and equations; captions/titles SimSun 10.5 pt centered; GB/T 7714—2015 references.
+
+Do not invent a cover, task book, evaluation form, declaration, or other administrative page when producing a paper-reading report. Add those pages only when the user provides or explicitly requests the thesis package template.
+
 ## Table alignment rules
 
 Tables should be visually hierarchical and role-aware:
